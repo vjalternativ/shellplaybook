@@ -61,8 +61,9 @@ class playbook
                 if ($hosts && $script && file_exists($script)) {
                     foreach ($hosts as $host) {
                         $cmd = "ssh " . $host . " 'bash -s' < " . $script;
-                        echo $cmd . PHP_EOL;
+                        echo "executing playbook for host " . $host . PHP_EOL;
                         echo shell_exec($cmd);
+                        echo "playbook played for host " . $host . PHP_EOL;
                     }
                 } else {
                     echo "host/script not found for group " . $key . PHP_EOL;
