@@ -1,0 +1,3 @@
+group=mediator_client
+script=deploy.sh
+host=localhost
